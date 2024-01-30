@@ -481,7 +481,7 @@ class countland:
             sg = self.subsample
 
         scounts = sparse.csr_matrix(sg)
-        sdots = np.dot(scounts, scounts.T)
+        sdots = scounts.dot(scounts.T)
         dots = sparse.csr_matrix.toarray(sdots)
 
         # n = self.counts.shape[0] # cells assumed to be rows
